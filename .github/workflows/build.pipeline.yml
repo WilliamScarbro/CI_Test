@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-ex-report
-        path: tests/test_ex.pytest_report
+        path: tests/test_ex.pytest_result
 # CD steps
     #- name: Run package creation
     #  run: |
