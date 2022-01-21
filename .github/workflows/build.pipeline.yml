@@ -26,13 +26,13 @@ jobs:
         if  [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Unit Tests and save pytest results 
       run: |
-        cd test
+        cd tests
         python3 -m pytest test_ex.py > test_ex.pytest_result
     - name: Archive code coverage html report
       uses: actions/upload-artifact@v2
       with:
         name: test-ex-report
-        path: test/test_ex.pytest_report
+        path: tests/test_ex.pytest_report
 # CD steps
     #- name: Run package creation
     #  run: |
